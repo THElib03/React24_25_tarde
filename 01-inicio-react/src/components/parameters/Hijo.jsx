@@ -1,7 +1,11 @@
-function Hijo() {
-  return (
-    <div><h1>Hola mundo</h1></div>
-  )
+function Hijo(args) {
+    const { data } = args;
+
+    return (
+        <div>
+            <h1>Hola mundo - {data.name}</h1>
+        </div>
+    );
 }
 
-export default Hijo
+export default Hijo;

@@ -1,10 +1,8 @@
-import { useState } from "react";
-import Contador from "./components/Contador";
-import Hijo from "./components/parameters/Hijo";
-import Padre from "./components/parameters/Padre";
+import Saludo from "./components/useEffect/Saludo";
+import ProductList from "./components/useEffect/fetching/ProductList";
 
 const App = () => {
-    const [data, setData] = useState({name: 'Martín', age: 24});
+    // const [data, setData] = useState({name: 'Martín', age: 24});
 
     return (
         <>
@@ -15,18 +13,16 @@ const App = () => {
 
                 <div className=" mb-8">
                     <h2 className=" text-2xl font-semibold mb-4 text-center">
-                        Contador Simple
+                        UseEffect                        
                     </h2>
-                    <Contador></Contador>
+                    <Saludo></Saludo>
                 </div>
 
                 <div className=" mb-8">
                     <h2 className=" text-2xl font-semibold mb-4 text-center">
-                        Componente Padre
+                        Fetch loaded with useEffect
                     </h2>
-                    <Padre data = {data} setData = {setData}>
-                        <Hijo data = {data} />
-                    </Padre>
+                    <ProductList/>
                 </div>
             </div>
         </>

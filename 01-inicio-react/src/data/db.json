@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "title": "Eloquent JavaScript",
+        "price": 25.99,
+        "image": "https://example.com/images/eloquent-javascript.jpg",
+        "tags": ["JavaScript", "Programming"]
+    },
+    {
+        "id": 2,
+        "title": "Python Crash Course",
+        "price": 29.99,
+        "image": "https://example.com/images/python-crash-course.jpg",
+        "tags": ["Python", "Programming"]
+    },
+    {
+        "id": 3,
+        "title": "The Rust Programming Language",
+        "price": 34.99,
+        "image": "https://example.com/images/rust-programming.jpg",
+        "tags": ["Rust", "Systems Programming"]
+    },
+    {
+        "id": 4,
+        "title": "Clean Code",
+        "price": 32.99,
+        "image": "https://example.com/images/clean-code.jpg",
+        "tags": ["Programming", "Best Practices"]
+    },
+    {
+        "id": 5,
+        "title": "You Don't Know JS Yet",
+        "price": 19.99,
+        "image": "https://example.com/images/you-dont-know-js.jpg",
+        "tags": ["JavaScript", "Programming"]
+    },
+    {
+        "id": 6,
+        "title": "Java: The Complete Reference",
+        "price": 39.99,
+        "image": "https://example.com/images/java-complete-reference.jpg",
+        "tags": ["Java", "Programming"]
+    },
+    {
+        "id": 7,
+        "title": "C++ Primer",
+        "price": 44.99,
+        "image": "https://example.com/images/cpp-primer.jpg",
+        "tags": ["C++", "Programming"]
+    },
+    {
+        "id": 8,
+        "title": "Programming Elixir",
+        "price": 31.99,
+        "image": "https://example.com/images/programming-elixir.jpg",
+        "tags": ["Elixir", "Functional Programming"]
+    },
+    {
+        "id": 9,
+        "title": "Learn You a Haskell for Great Good!",
+        "price": 24.99,
+        "image": "https://example.com/images/learn-you-a-haskell.jpg",
+        "tags": ["Haskell", "Functional Programming"]
+    },
+    {
+        "id": 10,
+        "title": "Effective C",
+        "price": 28.99,
+        "image": "https://example.com/images/effective-c.jpg",
+        "tags": ["C", "Systems Programming"]
+    },
+    {
+        "id": 11,
+        "title": "Pro TypeScript",
+        "price": 30.99,
+        "image": "https://example.com/images/pro-typescript.jpg",
+        "tags": ["TypeScript", "Programming"]
+    },
+    {
+        "id": 12,
+        "title": "Programming in Scala",
+        "price": 42.99,
+        "image": "https://example.com/images/programming-in-scala.jpg",
+        "tags": ["Scala", "Functional Programming"]
+    },
+    {
+        "id": 13,
+        "title": "Kotlin in Action",
+        "price": 33.99,
+        "image": "https://example.com/images/kotlin-in-action.jpg",
+        "tags": ["Kotlin", "Programming"]
+    },
+    {
+        "id": 14,
+        "title": "Go Programming Blueprints",
+        "price": 27.99,
+        "image": "https://example.com/images/go-programming-blueprints.jpg",
+        "tags": ["Go", "Programming"]
+    },
+    {
+        "id": 15,
+        "title": "Mastering Swift",
+        "price": 35.99,
+        "image": "https://example.com/images/mastering-swift.jpg",
+        "tags": ["Swift", "Programming"]
+    }
+]
