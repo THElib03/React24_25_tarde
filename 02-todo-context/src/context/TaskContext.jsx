@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 // Context
 export const TaskContext = createContext();
@@ -12,6 +12,10 @@ export const TaskProvider = ({ children }) => {
 
         return savedTasks ? JSON.parse(savedTasks) : [];
     });
+
+    useEffect(() => {
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    })
 
     //Methods
     const addTask = (newTask) => {
