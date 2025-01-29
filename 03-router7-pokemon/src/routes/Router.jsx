@@ -27,6 +27,7 @@ export const router = createBrowserRouter([
             {
                 path: ROUTES.POKEMON_DETAIL,
                 element: <PokemonDetail/>,
+                // This ia a parameter of react router that allows you to get/fetch/load data before rendering the page
                 loader: async ({ params }) => {
                     try{
                         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${params.name}`);

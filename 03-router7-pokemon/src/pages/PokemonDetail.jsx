@@ -1,13 +1,15 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
+import { usePokemon } from "../context/PokemonExport";
 
 const PokemonDetail = () => {
     // Load the Pokemon through the React Router fetch declared in Router.jsx
     const pokemon = useLoaderData();
     const navigate = useNavigate();
+    const { addToFavorites } = usePokemon();
 
     return ( <div className=" container mx-auto p-4">
         <div className=" max-w-2xl mx-auto bg-white p-6 rounded-xl shadow-lg">
-            <button onClick={ () => navigate(-1)} className=" mb-4 text-blue-400 hover:text-blue-800">Return</button>
+            <button onClick={ () => navigate(-1)} className=" mb-4 text-blue-400 hover:text-blue-800 hover:underline">Return</button>
 
             <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon.name} />
             <h1 className=" text-3xl font-bold text-center mt-4 capitalize">{pokemon.name}</h1>
@@ -34,7 +36,7 @@ const PokemonDetail = () => {
             </div>
             
             <div>
-                <button onClick={ () => console.log("Add to favorites")} className=" bg-red-500 text-white px-4 py-2 rounded hover:bg-slate-900">Add to Favorites</button>
+                <button onClick={ () => addToFavorites(pokemon)} className=" bg-red-500 text-white px-4 py-2 rounded hover:bg-slate-900">Add to Favorites</button>
             </div>
         </div>
     </div> );

@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../routes/paths";
+import { usePokemon } from "../context/PokemonExport";
+import Spinner from "../components/Spinner";
 
 const Home = () => {
     const [pokemons, setPokemons] = useState([]);
     const [loading, setLoading] = useState(false);
+    const { addToFavorites } = usePokemon();
 
     useEffect(() => {
         fetchPokemons();
@@ -37,6 +40,14 @@ const Home = () => {
         }
     }
 
+    if(loading){
+        return (
+            <div className=" flex justify-center items-center h-screen">
+                <Spinner/>
+            </div>
+        );
+    };
+
     return(
         <div className=" container mx-auto p-4">
             <h1 className=" text-3xl font-bold mb-6">Available Pokemons</h1>
@@ -48,7 +59,7 @@ const Home = () => {
                             <h4 className=" text-center text-xl">{pokemon.name}</h4>
 
                             <div className=" flex justify-center space-x-2 mt-4">
-                                <button className=" bg-red-700 text-white px-4 py2 rounded">Add to favorites</button>
+                                <button onClick={addToFavorites} className=" bg-red-700 text-white px-4 py2 rounded">Add to favorites</button>
                                 <Link to={`${ROUTES.SEARCH}/${pokemon.name}`} className=" bg-green-700 text-white px-4 py2 rounded">Details</Link>
                             </div>
                         </div>
