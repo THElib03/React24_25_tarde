@@ -3,5 +3,4 @@ export const ROUTES = {
     SEARCH: "/search",
     POKEMON_DETAIL: "/search/:name",
     FAVORITES: "/favorites"
-    
-}
+};

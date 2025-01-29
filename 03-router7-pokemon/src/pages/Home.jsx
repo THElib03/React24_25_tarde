@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../routes/paths";
 
 const Home = () => {
     const [pokemons, setPokemons] = useState([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-
+        fetchPokemons();
     }, []);
 
     const fetchPokemons = async () => {
@@ -43,7 +45,12 @@ const Home = () => {
                     <div key={pokemon.id} className=" bg-white rounded-lg p-6 hover:shadow-sm">
                         <div className=" relative group">
                             <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-                            <h4 className=" text-center text-xl"></h4>
+                            <h4 className=" text-center text-xl">{pokemon.name}</h4>
+
+                            <div className=" flex justify-center space-x-2 mt-4">
+                                <button className=" bg-red-700 text-white px-4 py2 rounded">Add to favorites</button>
+                                <Link to={`${ROUTES.SEARCH}/${pokemon.name}`} className=" bg-green-700 text-white px-4 py2 rounded">Details</Link>
+                            </div>
                         </div>
                     </div>
                 ))
@@ -52,4 +59,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export { Home };
