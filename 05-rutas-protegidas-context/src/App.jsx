@@ -1,9 +1,13 @@
-import { useState } from "react";
-import "./App.css";
+import { RouterProvider } from "react-router-dom";
+import {router} from './router/index';
+import { AuthProvider } from "./context/AuthContext";
 
 function App() {
-
-    return <div className=" text-6xl text-amber-600"></div>;
+    return (
+        <AuthProvider>
+            <RouterProvider router={router}/>
+        </AuthProvider>
+    );
 }
 
 export default App;
