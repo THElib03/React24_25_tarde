@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
         if(JSON.parse(localStorage.getItem('token')) === null){
             setIsAuthenticated(true);
             return;
+        }
     };
 
     const logout = () => {

@@ -18,12 +18,15 @@ export const AuthProvider = ({ children }) => {
         try{
             const token = localStorage.getItem('token');
             if(token){
-                console.log('algo');
+                setIsLogin(true);
             }
         }
         catch(err){
             setError(err);
             setIsLogin(false);
+        }
+        finally{
+            setLoading(false)
         }
     }
 
